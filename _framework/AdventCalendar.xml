@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AdventCalendar</name>
+    </assembly>
+    <members>
+        <member name="T:AdventCalendar.Settings.AppSettings">
+            <summary>
+            Model of app user settings. Same structure as appsettings.json, except 'days' data.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.AppSettings.StartYear">
+            <summary>
+            Represents from which year the archive starts.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.AppSettings.SkipYears">
+            <summary>
+            The years archive didn't exist (skipped). Should be more than <see cref="P:AdventCalendar.Settings.AppSettings.StartYear"/>, but less than current year.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.AppSettings.Title">
+            <summary>
+            The title of the application. For example, it can represent the whole calendar theme.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.AppSettings.Days">
+            <summary>
+            The days in the calendar.
+            </summary>
+            <value>If <c>containsChristmas</c> in the settings is <c>true</c>, 25. Otherwise 24.</value>
+        </member>
+        <member name="P:AdventCalendar.Settings.AppSettings.BaseUri">
+            <summary>
+            The path, where the contents are. Empty BaseUri resolves contents/ folder as default.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.AppSettings.SummaryLength">
+            <summary>
+            Length of the sumamry.
+            </summary>
+        </member>
+        <member name="T:AdventCalendar.Settings.IAppSettings">
+            <summary>
+            Provides interface of <see cref="T:AdventCalendar.Settings.AppSettings"/> for testing purpose.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.IAppSettings.StartYear">
+            <summary>
+            Represents from which year the archive starts.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.IAppSettings.SkipYears">
+            <summary>
+            The years archive didn't exist (skipped). Should be more than <see cref="P:AdventCalendar.Settings.IAppSettings.StartYear"/>, but less than current year.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.IAppSettings.Title">
+            <summary>
+            The title of the application. For example, it can represent the whole calendar theme.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.IAppSettings.Days">
+            <summary>
+            The days in the calendar.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.IAppSettings.BaseUri">
+            <summary>
+            The path, where the contents are. Empty BaseUri resolves contents/ folder as default.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Settings.IAppSettings.SummaryLength">
+            <summary>
+            Length of the sumamry.
+            </summary>
+        </member>
+        <member name="T:AdventCalendar.Models.DayInfoData">
+            <summary>
+            Parsed and organized information from a day markdown file.
+            </summary>
+        </member>
+        <member name="F:AdventCalendar.Models.DayInfoData.SummaryLength">
+            <summary>
+            Maximum length of the summary from the content.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Models.DayInfoData.Day">
+            <summary>
+            Represents the corresponding day of the data.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Models.DayInfoData.Title">
+            <summary>
+            Title of the data.
+            </summary>
+            <remarks>Always first header of markdown syntax is title.</remarks>
+        </member>
+        <member name="P:AdventCalendar.Models.DayInfoData.Summary">
+            <summary>
+            Truncated contents. Inside setting, <c>summaryLength</c> defines the length.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Models.DayInfoData.Content">
+            <summary>
+            HTML format text of the content.
+            </summary>
+            <remarks>Content doesn't contain text from the title. It's only in the <see cref="P:AdventCalendar.Models.DayInfoData.Title"/> propery.</remarks>
+        </member>
+        <member name="P:AdventCalendar.Models.DayInfoData.Exists">
+            <summary>
+            Check if it's real data or placeholder. Default is true, unless it's created by <see cref="M:AdventCalendar.Models.DayInfoData.CreateEmpty(System.Int32)" />.
+            </summary>
+        </member>
+        <member name="M:AdventCalendar.Models.DayInfoData.CreateEmpty(System.Int32)">
+            <summary>
+            Create <see cref="T:AdventCalendar.Models.DayInfoData" /> for non-existance. Placeholder of null.
+            </summary>
+            <param name="day">The day to set for the empty data</param>
+            <returns>Pre-defined specific <see cref="T:AdventCalendar.Models.DayInfoData" />.</returns>
+        </member>
+        <member name="T:AdventCalendar.Models.IDateTime">
+            <summary>
+            Provides public DateTime wrapper, both for server and client.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Models.IDateTime.Now">
+            <summary>
+            <see cref="T:System.DateTime"/> for the wrap.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Models.IDateTime.Year">
+            <summary>
+            <see cref="P:System.DateTime.Year"/> for the wrap.
+            </summary>
+        </member>
+        <member name="T:AdventCalendar.Models.DefaultDateTime">
+            <summary>
+            Default implementation for public DateTime wrapper, both for server and client.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Models.DefaultDateTime.Now">
+            <summary>
+            Provides Real <see cref="P:System.DateTime.Now"/>.
+            </summary>
+        </member>
+        <member name="P:AdventCalendar.Models.DefaultDateTime.Year">
+            <summary>
+            Provides Real Year from <see cref="P:System.DateTime.Now"/>.
+            </summary>
+        </member>
+        <member name="T:AdventCalendar.Services.ArchiveReader">
+            <summary>
+            Parses and reads JSON archive list from the server.
+            </summary>
+        </member>
+        <member name="M:AdventCalendar.Services.ArchiveReader.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)">
+            <summary>
+            Calls archive reader manually for test purpose.
+            </summary>
+            <param name="settings">The applicatino settings.</param>
+            <param name="datetime">Current date</param>
+        </member>
+        <member name="M:AdventCalendar.Services.ArchiveReader.GetYears">
+            <summary>
+            Get list of available calendar years asynchronously.
+            </summary>
+            <returns>Enumerable integers of available years.</returns>
+        </member>
+        <member name="M:AdventCalendar.Services.ArchiveReader.IsAvailableYear(System.Int32)">
+            <summary>
+            Get Available year.
+            </summary>
+            <param name="year">year to know if it's available</param>
+            <returns><c>true</c> if the year is available, <c>false</c> if it doesn't</returns>
+        </member>
+        <member name="T:AdventCalendar.Services.DataReceiver">
+            <summary>
+            Provides the concrete server data receiver.
+            </summary>
+        </member>
+        <member name="M:AdventCalendar.Services.DataReceiver.#ctor(AdventCalendar.Settings.IAppSettings,Microsoft.AspNetCore.Components.NavigationManager)">
+            <summary>
+            Creates DataReceiver for injecting purpose on a razor page.
+            </summary>
+        </member>
+        <member name="M:AdventCalendar.Services.DataReceiver.#ctor(System.Net.Http.HttpClient)">
+            <summary>
+            Creates DataReceiver for testing purpose with custom HttpClient.
+            </summary>
+            <param name="client">Custom HTTPClient to get data.</param>
+        </member>
+        <member name="M:AdventCalendar.Services.DataReceiver.CheckDayData(System.Int32,System.Int32)">
+            <summary>
+            Gets if day file is availble.
+            </summary>
+            <param name="year">Target year to receive data.</param>
+            <param name="day">Target day to receive data.</param>
+            <returns>true if the file exists, false if it the file doesn't exist.</returns>
+        </member>
+        <member name="M:AdventCalendar.Services.DataReceiver.ReceiveDayData(System.Int32,System.Int32)">
+            <summary>
+            Gets markdown of day file.
+            </summary>
+            <param name="year">Target year to receive data.</param>
+            <param name="day">Target day to receive data.</param>
+            <returns>Raw, unparsed markdown file as string.</returns>
+        </member>
+        <member name="T:AdventCalendar.Services.DayReader">
+            <summary>
+            Parses and reads markdown of the day data from the server.
+            </summary>
+        </member>
+        <member name="M:AdventCalendar.Services.DayReader.#ctor(AdventCalendar.Services.IDataReceiver,AdventCalendar.Models.IDateTime,AdventCalendar.Settings.IAppSettings)">
+            <summary>
+            Calls day reader and abstract datetime manually for test purpose.
+            </summary>
+            <param name="receiver"><see cref="T:AdventCalendar.Services.IDataReceiver"/>, which contains HTTP Client</param>
+            <param name="datetime"><see cref="T:AdventCalendar.Models.IDateTime"/>, which is possibly fake date.</param>
+            <param name="settings">Injected application Setting.</param>
+        </member>
+        <member name="M:AdventCalendar.Services.DayReader.GetContent(System.Int32)">
+            <summary>
+            Get parsed markdown object asynchronously for current year with a day.
+            </summary>
+            <param name="day">The target day to get data.</param>
+            <returns>Parsed <see cref="T:AdventCalendar.Models.DayInfoData"/></returns>
+        </member>
+        <member name="M:AdventCalendar.Services.DayReader.GetAvailability(System.Int32,System.Int32)">
+            <summary>
+            Get Availability of specific day data
+            </summary>
+            <param name="year">The target year check data.</param>
+            <param name="day">The target day to check data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdventCalendar.Services.DayReader.GetContent(System.Int32,System.Int32)">
+            <summary>
+            Get parsed markdown object asynchronously with a day and a year.
+            </summary>
+            <param name="year">The target year to get data.</param>
+            <param name="day">The target day to get data.</param>
+            <returns>Parsed <see cref="T:AdventCalendar.Models.DayInfoData"/></returns>
+        </member>
+        <member name="T:AdventCalendar.Services.DaysShuffler">
+            <summary>
+            Shuffles date according to year.
+            </summary>
+        </member>
+        <member name="M:AdventCalendar.Services.DaysShuffler.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)">
+            <summary>
+            Inject fake datetime for testing purpose.
+            </summary>
+            <param name="settings">Settings of the application.</param>
+            <param name="_datetime"><see cref="T:AdventCalendar.Models.IDateTime"/>, which is possibly fake.</param>
+        </member>
+        <member name="M:AdventCalendar.Services.DaysShuffler.ShuffleDays">
+            <summary>
+            Shuffle Christmas calendar days according to year.
+            </summary>
+            <remarks>For same year, it returns always same result. It returns very rarely the same result from different years.</remarks>
+            <returns>Integer Array of shuffled values</returns>
+        </member>
+        <member name="T:AdventCalendar.Services.IDataReceiver">
+            <summary>
+            Provides the server data receiver interface.
+            </summary>
+            <remarks>
+            Wraps the <see cref="T:System.Net.Http.HttpClient"/> for testing purpose.
+            </remarks>
+        </member>
+        <member name="M:AdventCalendar.Services.IDataReceiver.CheckDayData(System.Int32,System.Int32)">
+            <summary>
+            Gets if day file is availble.
+            </summary>
+            <param name="year">Target year to receive data.</param>
+            <param name="day">Target day to receive data.</param>
+            <returns>true if the file exists, false if it the file doesn't exist.</returns>
+        </member>
+        <member name="M:AdventCalendar.Services.IDataReceiver.ReceiveDayData(System.Int32,System.Int32)">
+            <summary>
+            Provides getter interface of markdown of day file from the server.
+            </summary>
+            <param name="year">Target year to receive data.</param>
+            <param name="day">Target day to receive data.</param>
+            <returns>Raw, unparsed markdown file as string.</returns>
+        </member>
+        <member name="T:AdventCalendar.Services.Validator">
+            <summary>
+            Client-side check if the given date is future or not.
+            </summary>
+        </member>
+        <member name="M:AdventCalendar.Services.Validator.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)">
+            <summary>
+            Create Validator instance with datetime for test purpose.
+            </summary>
+            <param name="settings">Settings of the application.</param>
+            <param name="datetime">Current <see cref="T:AdventCalendar.Models.IDateTime"/>, which is possibly fake date.</param>
+        </member>
+        <member name="M:AdventCalendar.Services.Validator.IsOpenToday(System.Int32,System.Int32)">
+            <summary>
+            Check if the day is future or not based on a year and a day.
+            </summary>
+            <remarks>Based on <c>IsOpenToday()</c>, the future day is inactivated in the calendar.</remarks>
+            <param name="targetYear">The year to check</param>
+            <param name="targetDay">The day to check</param>
+            <returns><c>true</c> if the date is valid and not the future, otherwise <c>false</c></returns>
+        </member>
+        <member name="M:AdventCalendar.Services.Validator.IsOpenToday(System.Int32)">
+            <summary>
+            Check if the day is future or not based on a day in current year.
+            </summary>
+            <remarks>Based on <c>IsOpenToday()</c>, the future day is inactivated in the calendar.</remarks>
+            <param name="targetDay">The day of current year to check</param>
+            <returns><c>true</c> if the date is valid and not the future, otherwise <c>false</c></returns>
+        </member>
+    </members>
+</doc>

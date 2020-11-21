@@ -1,0 +1,215 @@
+/* /Pages/Archives/Archive.razor.rz.scp.css */
+.archive-back[b-qfrtus63ys] {
+    text-decoration: none;
+    background-color: #e0e0e0;
+    padding: .45rem .75rem;
+    margin: .48rem 3.15rem;
+    display: inline-block;
+    color: navy;
+    border: 1px solid #7979cc;
+}
+    .archive-back:hover[b-qfrtus63ys] {
+        background-color:#f9fafb;
+    }
+/* /Pages/Archives/Days.razor.rz.scp.css */
+.day-wrapper[b-m10zqhe62h] {
+    margin-left: 1.5rem;
+    background-color: #efe9f9;
+}
+.day-header[b-m10zqhe62h] {
+    background-color: #d6d7f4;
+    margin: 0;
+    padding: 0.3rem 0.4rem;
+}
+.day-content[b-m10zqhe62h] {
+    padding: 0.8rem 1.5rem;
+}
+    .day-content a[b-m10zqhe62h] {
+        color: #fff6fd;
+        background-color: #6874ae;
+        text-decoration: none;
+        padding: 0.6rem 0.8rem;
+        display: inline-block;
+    }
+        .day-content a:hover[b-m10zqhe62h] {
+            background-color: #242a73;
+        }
+/* /Pages/Days.razor.rz.scp.css */
+/* days.razor */
+.day-wrapper[b-orp2ah2ldt] {
+    width: 80%;
+    display: inline-block;
+    border-radius: 1rem;
+    overflow: auto;
+}
+.day-header[b-orp2ah2ldt] {
+    font-size: 1.8rem;
+    background: rgba(114, 136, 96, 0.9);
+    color: #fff;
+    margin: 0;
+    padding: .8rem 0 .6rem 0;
+    border: 5px #bbb09087;
+    border-style: solid none;
+}
+
+.day-content[b-orp2ah2ldt] {
+    background-color: #f7e7c9bf;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+/* button */
+.linkbtn[b-orp2ah2ldt] {
+    margin: 1.2rem .2rem .35rem .2rem;
+    display: inline-block;
+    border-radius: 10px;
+    background: #2d3375;
+    color: #fff;
+    padding: .7rem .95rem;
+    text-decoration: none;
+}
+    .linkbtn:hover[b-orp2ah2ldt] {
+        background-color: #863e98;
+        cursor:pointer;
+    }
+
+/* for mobile and vertical screen */
+@media screen and (max-width:800px)
+{
+    .day-wrapper[b-orp2ah2ldt] {
+        width: 100%;
+        display:block;
+    }
+}
+/* /Pages/Index.razor.rz.scp.css */
+.calendar[b-zv4xu00hhj] {
+    display: inline-grid;
+    background-color: rgba(255,255,255,0.7);
+}
+.calendar:not(.calendar-eve)[b-zv4xu00hhj] {
+    grid-template-columns: repeat(5, 1fr);
+}
+.calendar-eve[b-zv4xu00hhj] {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+    .calendar > div[b-zv4xu00hhj] {
+        box-sizing: border-box;
+        border: 1px solid #999;
+        font-size: 4.5rem;
+        text-align:center;
+        padding: .3em .5em;
+    }
+
+.calendar-open[b-zv4xu00hhj] {
+    background-color:rgba(255,255,255,0.3);
+}
+
+    .calendar-open:hover[b-zv4xu00hhj] {
+        background-color: rgba(250,125,125,0.3);
+        cursor: pointer;
+    }
+
+.calendar-closed[b-zv4xu00hhj] {
+    color: #606060;
+    background-color: rgba(105,105,105,0.5);
+}
+
+/* for mobile and vertical screen */
+@media screen and (max-width:800px)
+{
+    .calendar[b-zv4xu00hhj] {
+        width:100%;
+    }
+    .calendar > div[b-zv4xu00hhj] {
+        font-size:2.5rem;
+        padding: .3em .2em;
+    }
+}
+
+@media screen and (max-aspect-ratio:8/5) {
+    .calendar-eve[b-zv4xu00hhj] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/* /Pages/Modals/Modal.razor.rz.scp.css */
+/* dialog */
+.modal-background[b-q1c0pqoc7t] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#00000090;
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+}
+.modal[b-q1c0pqoc7t] {
+    padding:0.84rem 1.5rem;
+    width:80%;
+    max-width:50rem;
+    background-color:#fff;
+    color:#000;
+    border-radius:3px;
+}
+    .modal h3[b-q1c0pqoc7t] {
+        margin: .64rem 0 .4rem 0;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: .45rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    .modal:not(h3)[b-q1c0pqoc7t] {
+        font-size:1.1rem;
+    }
+/* /Shared/ArchiveLayout.razor.rz.scp.css */
+.archive-header[b-fsutj10yxe] {
+    background-color: #e0d0ea;
+    padding: 0.6rem 0.8rem;
+    border-left: 10px solid #7385df;
+}
+
+.footer a[b-fsutj10yxe] {
+    color:#392a71;
+}
+    .footer a:hover[b-fsutj10yxe] {
+        color:#bd2180;
+    }
+
+/* /Shared/MainLayout.razor.rz.scp.css */
+.app-layout[b-f6i2trx9h8] {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin:0; padding:0;
+    overflow: auto; /* css is weird. really weird. */
+    background: url('/imgs/cshrap_blazor_nuget.svg') right bottom no-repeat fixed, url("/imgs/snowflakes.svg") repeat fixed, linear-gradient(#cd66af, #9faaff) fixed;
+    background-size: 40%, auto auto, 100%;
+    background-size: 40%;
+}
+.app-body[b-f6i2trx9h8] {
+    text-align: center;
+}
+
+h1[b-f6i2trx9h8] {
+    font-size: 2.5rem;
+    margin-top: 3.1rem;
+    text-shadow: 0 0 3px #fff;
+    color: #fff;
+}
+
+.footer[b-f6i2trx9h8] {
+    background-color: #2b1f6a96;
+    color: #fff;
+    font-size: 125%;
+    font-family: Calibri, sans-serif;
+}
+    .footer a[b-f6i2trx9h8] {
+        color: #adf6f9;
+    }
+        .footer a:hover[b-f6i2trx9h8] {
+            color: #ffc9fe;
+            background-color: #281d60;
+        }
+
+@media screen and (max-aspect-ratio:8/5) {
+    .app-layout[b-f6i2trx9h8] {
+        background-size: 100%, auto auto, 100%;
+    }
+}

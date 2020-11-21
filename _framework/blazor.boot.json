@@ -27,7 +27,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-E1ZVZc8ppcbuan9B4K4NDw+BijA0pjKkIIwlnGerx9g=",
       "Newtonsoft.Json.dll": "sha256-N4LS9Q4MWtwMcEiKVAm17eMYYidLKee5B788vtw\/fdY=",
       "System.IO.Pipelines.dll": "sha256-CETD5tkXtiKEgbXyN\/lp0Ejf6LcHIhgeQIEyow2mhmY=",
-      "AdventCalendar.dll": "sha256-h4UiHxmYC+MbxwrD+2pTYxyZ2j4jvVh459gMoP65U40=",
+      "AdventCalendar.dll": "sha256-XBHnjQUlDS6wO6vIYasd6mqg0R16Hg3ltYiWa35KAWM=",
       "System.Collections.Concurrent.dll": "sha256-zeNpmpHw3KFiNAShqZpp90+eX3tLEqVsGTPe3KAXDoI=",
       "System.Collections.Immutable.dll": "sha256-H0NRRotG+86W0xlW9OELRJ+B6CWn5QPzD5wfmou5WDE=",
       "System.Collections.NonGeneric.dll": "sha256-ocKRR1j4ZnzNzlUrPzslVbckMjcocFtCJSmF8UoQVgQ=",
@@ -60,7 +60,7 @@
       "System.Text.Encodings.Web.dll": "sha256-p+w4VfOQe4xpDeMVUmqzR+TJIhbDwykCrATzc5\/TVUM=",
       "System.Text.Json.dll": "sha256-hI0aNOrpLyHe+1cV9\/hHN5lWC\/ubMTGGRybdjADrHh4=",
       "System.Text.RegularExpressions.dll": "sha256-JVuU7tX+FGXJpOsenmC0OFrykvuyfcwR8pq\/pPegNfw=",
-      "System.Private.CoreLib.dll": "sha256-Ee8cIOTWnO302BBUh\/C2i\/Q4\/Ub9z72GFT+5LvJm43o="
+      "System.Private.CoreLib.dll": "sha256-mVB0GHmP3Yw19G\/0he3Czr8pdbwC8DqCV3BIVHLrp+s="
     },
     "lazyAssembly": null,
     "pdb": null,

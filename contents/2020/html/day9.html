@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/day9.css" />
+    <style type="text/css">
+    body{
+        position: relative;
+        margin-left:50px;
+    }
+    .tree {
+        width:7.5% !important;
+        min-width:60px;
+        height:500px !important;
+        background-color: rgb(135,100,0);
+        position: absolute !important;
+        margin:0 !important;
+
+    }
+    .tree::before{
+        background-color:rgb(135,100,0);
+        width:90px;
+        height:50px;
+        transform:rotate(30deg);
+        position:absolute;
+        left:-50px;
+        top:60px;
+        content:"";
+    }
+    .tree::after{
+        background-color:rgb(135,100,0);
+        width:150px;
+        height:35px;
+        transform:rotate(-45deg);
+        position:absolute;
+        right:-90px;
+        top:250px;
+        content:"";
+    }
+    .leaf {
+        position: absolute;
+        width:75px;
+        height:30px;
+        border-radius:50%;
+        background-color:yellowgreen;
+    }
+    </style>
+</head>
+<body>
+    <div class="tree" style="left:1%;top:50px;">
+        <div class="leaf" style="left:-30px;top:45px;"></div>
+        <div class="leaf" style="right:-40px;top:135px;"></div>
+    </div>
+    <div class="tree" style="left:11%;top:200px;"></div>
+    <div clasS="tree" style="left:25%;top:100px;">
+        <div class="leaf" style="left:-15px;top:67px;"></div>
+    </div>
+    <div class="tree" style="left:42%;top:25px;">
+        <div class="leaf" style="left:-55px;top:60px;"></div>
+        <div class="leaf" style="left:30%;top:135px;"></div>
+        <div class="leaf" style="right:-30px;top:240px;"></div>
+    </div>
+    <div class="tree" style="left:64%;top:200px;"></div>
+    <div class="tree" style="left:80%;top:100px;">
+        <div class="leaf" style="left:-15px;top:20px;"></div>
+        <div class="leaf" style="right:-60px;top:175px;"></div>
+    </div>
+</body>
+</html>

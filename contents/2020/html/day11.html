@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/day11.css" />
+    <style type="text/css">
+    .bath{
+        width:600px;
+        height:250px;
+        border:15px solid gray;
+        box-sizing: border-box;
+        border-top:none;
+        border-radius:0 0 50px 50px;
+        position:relative;
+    }
+    .rubberduck{
+        position:absolute !important;
+        bottom:0 !important;
+        right:0 !important;
+        margin:0 !important;
+    }
+    .rubberduck-head{
+        width:50px;
+        height:50px;
+        display: block;
+        margin-top:-50px;
+        text-align: center;
+    }
+    .rubberduck-head::after{
+        content:"";
+        width:30px;
+        height:15px;
+        margin-left:-20px;
+        display: block;
+        border-radius: 50%;
+        background-color:orangered;
+    }
+    .rubberduck-body {
+        height:50px;
+        width:100px;
+    }
+    .rubberduck-head, .rubberduck-body {
+        border-radius: 50%;
+        background-color:yellow;
+        border:1px solid orangered;
+        bottom:0 !important;
+        margin-bottom:0 !important;
+    }
+    </style>
+</head>
+<body>
+    <div class="bath">
+        <div class="water">
+            <div class="rubberduck">
+                <div class="rubberduck-head">&#x2022;</div>
+                <div class="rubberduck-body"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

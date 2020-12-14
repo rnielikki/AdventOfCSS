@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/day14.css" />
+    <style type="text/css">
+        .window {
+            display: inline-block;
+            width:600px;
+            height:600px;
+            position: relative;
+        }
+        .glass {
+            background-color: royalblue;
+        }
+        .glass div {
+            position: absolute;
+        }
+        .cloud, .cloud::before, .cloud::after {
+            background-color:#fff;
+            position:absolute;
+            width:100px;
+            height:40px;
+            border-radius: 50%;
+        }
+        .cloud:first-child{
+            top:15px;
+            right:45px;
+        }
+        .cloud:nth-child(2){
+            top:47px;
+            right:164px;
+        }
+        .cloud {
+            width:100px;
+            height:60px;
+        }
+        .cloud::before {
+            content:"";
+            width:60px;
+            height:30px;
+            top:15px;
+            left:-45px;
+        }
+        .cloud::after{
+            content:"";
+            width:50px;
+            height:35px;
+            top:21px;
+            right:-20px;
+        }
+        .ground, .ground div {
+            bottom:0;
+        }
+        .house {
+            background-color:red !important;
+            background-image:none !important;
+        }
+        .tree {
+            background-color:rgb(175, 65, 0)
+        }
+        .tree::before {
+            background-color:green;
+            border-radius: 50%;
+            content:"";
+            position: absolute;
+            width:100px;
+            height:100px;
+            top:-50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="glass">
+            <div class="cloud">
+            </div>
+            <div class="cloud">
+            </div>
+            <div class="ground">
+                <div class="house" style="width:80px; height:125px; left:30px;"></div>
+                <div class="house" style="width:45px; height:67px; left:273px;"></div>
+                <div class="house" style="width:110px; height:58px; left:367px;"></div>
+                <div class="tree" style="width:27px; height:89px; left:165px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

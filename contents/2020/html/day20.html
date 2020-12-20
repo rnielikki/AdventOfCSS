@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/day20.css" />
+    <style type="text/css">
+    body {
+        font-size:2rem;
+        font-family: sans-serif;
+    }
+    .button-collection {
+        background-color: snow;
+        padding:1.5rem 0;
+        overflow: auto;
+    }
+    a {
+        text-decoration: none;
+    }
+    .start {
+        background-color:beige;
+        color:darkred;
+        border:3px solid lightpink;
+    }
+    .start:hover {
+    background-color:lightpink;
+    }
+    .end {
+        margin-top:1.5rem;
+        overflow: auto;
+    }
+    </style>
+</head>
+<body>
+    <a href="#plan" class="start">Start</a>
+    <!--You want to use flexbox? never!-->
+    <div class="button-collection" style="display: block;float:left;width:100%;">
+        <a href="#order" id="plan">Plan</a>
+        <a href="#pack" id="order">Order</a>
+        <a href="#sort" id="pack">Sort</a>
+        <a href="#deliver" id="sort">Pack</a>
+        <a href="#ready" id="deliver">Deliver</a>
+        <div class="end" id="ready" style="display:block;width:auto">It's ready</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/day23.css" />
+    <style type="text/css">
+    body {
+        --box-size:300px;
+    }
+    .cube > div {
+        width:var(--box-size);
+        height:var(--box-size);
+        color:#fff;
+        font-size:150%;
+    }
+    .scanner {
+        margin:100px;
+        width:600px;
+        height:800px;
+        background-image:linear-gradient(to bottom, yellow 0%, transparent 100%) !important;
+    }
+    </style>
+</head>
+<body>
+    <div class="scanner">
+        <div class="cube">
+            <div class="square1" style="--color:red">1</div>
+            <div class="square2" style="--color:blue">2</div>
+            <div class="square3" style="--color:yellow"3></div>
+            <div class="square4" style="--color:cyan">4</div>
+            <div class="square5" style="--color:green">5</div>
+            <div class="square6" style="--color:gray">6</div>
+        </div>
+    </div>
+</body>
+</html>
